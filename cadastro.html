@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cadastre-se para ser um voluntário ou fazer doações para nossos projetos de reflorestamento na Amazônia.">
+    <meta name="keywords" content="cadastro, voluntário, doação, reflorestamento, Amazônia">
+    <meta name="author" content="ONG Sementes do Amanhã">
+    <title>Cadastro - Sementes do Amanhã</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Logo Sementes do Amanhã - Curupira, o guardião das florestas" width="150" height="150">
+                <img src="img/banner.png" alt="Banner Sementes do Amanhã" width="500" height="280">
+                <span>Sementes do Amanhã</span>
+            </a>
+            
+            <button class="mobile-menu-btn" aria-label="Abrir menu" aria-expanded="false">
+                ☰
+            </button>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Junte-se à Nossa Causa</h1>
+                <p>Preencha o formulário abaixo para se cadastrar como voluntário ou doador</p>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <div class="container">
+                <div class="form-container">
+                    <form id="form-cadastro" novalidate>
+                        <fieldset>
+                            <legend>Dados Pessoais</legend>
+                            
+                            <div class="form-group">
+                                <label for="nome-completo" class="required">Nome Completo</label>
+                                <input type="text" id="nome-completo" name="nome-completo" required minlength="5" placeholder="Digite seu nome completo">
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email" class="required">E-mail</label>
+                                    <input type="email" id="email" name="email" required placeholder="seu@email.com">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="cpf" class="required">CPF</label>
+                                    <input type="text" id="cpf" name="cpf" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00" maxlength="14">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="telefone" class="required">Telefone</label>
+                                    <input type="tel" id="telefone" name="telefone" required placeholder="(00) 00000-0000" maxlength="15">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="data-nascimento" class="required">Data de Nascimento</label>
+                                    <input type="date" id="data-nascimento" name="data-nascimento" required>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Endereço</legend>
+                            
+                            <div class="form-group">
+                                <label for="endereco" class="required">Endereço</label>
+                                <input type="text" id="endereco" name="endereco" required placeholder="Rua, número, complemento">
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="cep" class="required">CEP</label>
+                                    <input type="text" id="cep" name="cep" required pattern="\d{5}-\d{3}" placeholder="00000-000" maxlength="9">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="cidade" class="required">Cidade</label>
+                                    <input type="text" id="cidade" name="cidade" required placeholder="Sua cidade">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="estado" class="required">Estado</label>
+                                <select id="estado" name="estado" required>
+                                    <option value="">Selecione seu estado</option>
+                                    <option value="AC">Acre</option>
+                                    <option value="AL">Alagoas</option>
+                                    <option value="AP">Amapá</option>
+                                    <option value="AM">Amazonas</option>
+                                    <option value="BA">Bahia</option>
+                                    <option value="CE">Ceará</option>
+                                    <option value="DF">Distrito Federal</option>
+                                    <option value="ES">Espírito Santo</option>
+                                    <option value="GO">Goiás</option>
+                                    <option value="MA">Maranhão</option>
+                                    <option value="MT">Mato Grosso</option>
+                                    <option value="MS">Mato Grosso do Sul</option>
+                                    <option value="MG">Minas Gerais</option>
+                                    <option value="PA">Pará</option>
+                                    <option value="PB">Paraíba</option>
+                                    <option value="PR">Paraná</option>
+                                    <option value="PE">Pernambuco</option>
+                                    <option value="PI">Piauí</option>
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="RN">Rio Grande do Norte</option>
+                                    <option value="RS">Rio Grande do Sul</option>
+                                    <option value="RO">Rondônia</option>
+                                    <option value="RR">Roraima</option>
+                                    <option value="SC">Santa Catarina</option>
+                                    <option value="SP">São Paulo</option>
+                                    <option value="SE">Sergipe</option>
+                                    <option value="TO">Tocantins</option>
+                                </select>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Como você quer ajudar?</legend>
+                            
+                            <div class="form-group">
+                                <label>Tipo de Participação</label>
+                                <div class="radio-group">
+                                    <label>
+                                        <input type="radio" name="participacao" value="voluntario" required>
+                                        <span>Voluntário</span>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="participacao" value="doador">
+                                        <span>Doador</span>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="participacao" value="ambos">
+                                        <span>Ambos</span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="areas-interesse">Áreas de Interesse (para voluntários)</label>
+                                <select id="areas-interesse" name="areas-interesse" multiple>
+                                    <option value="reflorestamento">Reflorestamento em campo</option>
+                                    <option value="educacao">Educação ambiental</option>
+                                    <option value="comunicacao">Comunicação e marketing</option>
+                                    <option value="administrativo">Apoio administrativo</option>
+                                    <option value="eventos">Organização de eventos</option>
+                                </select>
+                                <small>Mantenha Ctrl pressionado para selecionar múltiplas opções</small>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="valor-doacao">Valor da Doação Mensal (para doadores)</label>
+                                <input type="number" id="valor-doacao" name="valor-doacao" min="0" step="10" placeholder="R$ 0,00">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="mensagem">Mensagem ou Observações</label>
+                                <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte-nos um pouco sobre sua motivação..."></textarea>
+                            </div>
+                        </fieldset>
+
+                        <div class="form-group checkbox-group">
+                            <label>
+                                <input type="checkbox" name="termos" required>
+                                <span class="required">Li e concordo com os termos de uso e política de privacidade</span>
+                            </label>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label>
+                                <input type="checkbox" name="newsletter">
+                                <span>Desejo receber newsletter com novidades da ONG</span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-submit">Enviar Cadastro</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sementes do Amanhã</h3>
+                    <p>Dedicados à preservação e recuperação da Floresta Amazônica desde 2010.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">
+                            <img src="img/logofacebook.png" alt="Facebook" width="64" height="64">
+                        </a>    
+                        <a href="#" aria-label="Instagram">
+                            <img src="img/logoinstagram.png" alt="Instagram" width="64" height="64">
+                        </a>
+                        <a href="#" aria-label="X">
+                            <img src="img/logoX.png" alt="X" width="64" height="64">
+                        </a>   
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
+                        <li><a href="cadastro.html">Cadastre-se</a></li> 
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li>📧 contato@sementesdoamanha.org.br</li>
+                        <li>📞 (11) 3456-7890</li>
+                        <li>📍 Av. Paulista, 1000 - São Paulo, SP</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Sementes do Amanhã. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
