@@ -11,7 +11,7 @@ Data: 28/10/2025
 
 ## ESTRUTURA
 
-Sementes-do-Amanha  
+sementes-do-amanha  
 ├── index.html  
 ├── projetos.html  
 ├── cadastro.html  
