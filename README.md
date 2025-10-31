@@ -7,7 +7,7 @@ Autor(a): Jéssica de Albuquerque Storgatto
 Instituição: Universidade Cruzeiro do Sul  
 Disciplina: Desenvolvimento Front-End para Web  
 Atividade: Experiências Práticas  
-Data: 28/10/2025
+Data: 31/10/2025
 
 ## ESTRUTURA
 
@@ -15,7 +15,10 @@ sementes-do-amanha
 ├── index.html  
 ├── projetos.html  
 ├── cadastro.html  
-├── /img  
+├── styles.css  
+├── fonts    
+├── /img     
+│    └── background
 └── README.md
 
 ## ENTREGAS REALIZADAS
@@ -30,8 +33,27 @@ sementes-do-amanha
 - Organização de pastas (/img, etc.);
 - Códigos validados pelo W3C.
 
+(EXPERIÊNCIA PRÁTICA II)
+- Sistema completo com variáveis CSS customizadas;
+- Paleta de cores com 20+ cores, tipografia hierárquica com 10 tamanhos de fonte, sistema de espaçamento modular (7 níveis), 5 breakpoints responsivos;
+- Leiautes Responsivos com Flexbox e Grid;
+- Grid customizado de 12 colunas;
+- Menu principal responsivo com submenu dropdown;
+- Navegação mobile com menu hambúrguer;
+- Sistema de cards responsivos para projetos;
+- Botões com estados visuais (hover, focus);
+- Formulários estilizados com validação visual;
+- Componentes de feedback (modal interativo);
+- Sistema de badges e tags para categorização;
+- Media queries avançadas para 5 tamanhos de dispositivos;
+- Layouts específicos para diferentes tipos de conteúdo;
+- 3 fontes customizadas;
+- Sistema de ícones emoji;
+- Validação de formulário em tempo real;
+- Animações e transições avançadas;
+- Variáveis CSS organizadas por categorias.
+
 ## ENTREGAS PENDENTES
 
-- EXPERIÊNCIA PRÁTICA II: Interfaces Web Modernas com CSS3;
 - EXPERIÊNCIA PRÁTICA III: Programação de Interfaces Web (JavaScript);
 - EXPERIÊNCIA PRÁTICA IV: Versionamento, Deploy e Infraestrutura.

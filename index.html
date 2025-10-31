@@ -9,28 +9,107 @@
     <title>Sementes do Amanhã: O Guardião das Futuras Florestas</title>
     <link rel="icon" type="img/png" sizes="32x32" href="img/favicon32x.png">
     <link rel="icon" type="img/png" sizes="16x16" href="img/favicon16x.png">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
+    <!-- Modal da Passeata Sustentável -->
+    <div class="modal-wrapper">
+        <input type="checkbox" id="modalToggle" class="modal-toggle" checked>
+        
+        <label for="modalToggle" class="modal-overlay"></label>
+        
+        <div class="modal-content">
+            <label for="modalToggle" class="modal-close" aria-label="Fechar modal">×</label>
+            
+            <div class="modal-header">
+                <div class="icon-emoji">🌍</div>
+                <h2>Participe da Grande Passeata pela Sustentabilidade!</h2>
+            </div>
+            
+            <div class="modal-body">
+                <div class="event-info">
+                    <div class="info-item">
+                        <span class="icon">📅</span>
+                        <div>
+                            <strong>Data:</strong>
+                            <p>Próximo Sábado</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <span class="icon">⏰</span>
+                        <div>
+                            <strong>Horário:</strong>
+                            <p>9:00 às 12:00</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <span class="icon">📍</span>
+                        <div>
+                            <strong>Local:</strong>
+                            <p>Avenida Paulista, em frente ao MASP</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="event-description">
+                    <p>Junte-se a nós nesse movimento importante pela preservação do meio ambiente! Vamos mostrar que juntos podemos fazer a diferença.</p>
+                    
+                    <ul>
+                        <li>✅ Camiseta verde (opcional)</li>
+                        <li>✅ Cartazes e faixas sustentáveis</li>
+                        <li>✅ Energia positiva e vontade de mudar</li>
+                        <li>✅ Amigos e familiares são bem-vindos!</li>
+                    </ul>
+                    
+                    <p class="highlight">Traga sua garrafa de água reutilizável! 💚</p>
+                </div>
+            </div>
+            
+            <div class="modal-footer">
+                <a href="#confirmar" class="btn btn-confirm">Eu vou participar!</a>
+                <label for="modalToggle" class="btn btn-secondary">Talvez depois</label>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+    
+</body>
+</html>
+
 <body>
     <!-- Cabeçalho -->
     <header>
         <div class="container header-container">
-            <a href="index.html" class="logo">
-                <img src="img/logo.png" alt="Logo Sementes do Amanhã - Curupira, o guardião das florestas" width="150" height="150">
-                <img src="img/banner.png" alt="Banner Sementes do Amanhã" width="500" height="280">
-                <span>Sementes do Amanhã</span>
-            </a>
+             <div class="logo-container">
+                <div class="logo-image">
+                    <img src="img/logo.png" alt="Logo Sementes do Amanhã - Curupira, o guardião das florestas" width="150" height="150">
+                </div>
+            </div>    
             
-            <button class="mobile-menu-btn" aria-label="Abrir menu" aria-expanded="false">
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="mobile-menu-btn" aria-label="Abrir menu">
                 ☰
-            </button>
+            </label>
             
-            <nav>
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="projetos.html">Projetos</a></li>
-                    <li><a href="cadastro.html">Cadastro</a></li>
-                </ul>
-            </nav>
+            <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li class="dropdown">
+                    <a href="projetos.html" class="dropdown-toggle">Projetos</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="projetos.html#amazonia-verde">Amazônia Verde</a></li>
+                        <li><a href="projetos.html#educacao-ambiental">Educação Ambiental</a></li>
+                        <li><a href="projetos.html#economia-sustentavel">Economia Sustentável</a></li>
+                    </ul>
+                </li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
         </div>
     </header>
 
@@ -54,10 +133,7 @@
                         <p>A <strong>Sementes do Amanhã</strong> é uma organização não-governamental fundada em 2008 com a missão de proteger e recuperar a Floresta Amazônica. Inspirados pela lenda do Curupira, o guardião das florestas, atuamos com determinação e respeito aos saberes tradicionais.</p>
                         <p>Nossa atuação se baseia em três pilares: <strong>reflorestamento</strong> de áreas degradadas, <strong>educação ambiental</strong> e <strong>empoderamento das comunidades locais</strong>. Acreditamos que a conservação da Amazônia é essencial para o equilíbrio climático global e para a sobrevivência de milhares de espécies.</p>
                         <p>Com uma equipe multidisciplinar e o apoio de voluntários e parceiros, já recuperamos mais de 8.000 hectares de floresta e plantamos mais de 3 milhões de árvores nativas.</p>
-                    </div>
-                    <div class="about-image">
-                        <img src="images/equipe-amazonia.jpg" alt="Equipe da Sementes do Amanhã" width="600" height="400">
-                    </div>
+                    <div>
                 </div>
             </div>
         </section>
@@ -93,7 +169,7 @@
     </main>
 
     <!-- Rodapé -->
-    <footer>
+    <footer class="footer-index">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
@@ -120,5 +196,3 @@
     </footer>
 </body>
 </html>
-
-        
