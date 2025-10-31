@@ -18,7 +18,7 @@ sementes-do-amanha
 ├── styles.css  
 ├── fonts    
 ├── /img     
-│    └── background
+│    └── background  
 └── README.md
 
 ## ENTREGAS REALIZADAS
