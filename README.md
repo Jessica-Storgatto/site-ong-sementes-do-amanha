@@ -1,4 +1,3 @@
-# SOBRE O PROJETO (SEMENTES DO AMANHÃ)
 A ONG Sementes do Amanhã é uma organização fictícia criada para o desenvolvimento de atividades acadêmicas.  
 O site foi construído com base nos princípios de semântica, acessibilidade e design limpo, servindo como base para futuras evoluções com CSS e JavaScript.
 
@@ -7,17 +6,19 @@ Autor(a): Jéssica de Albuquerque Storgatto
 Instituição: Universidade Cruzeiro do Sul  
 Disciplina: Desenvolvimento Front-End para Web  
 Atividade: Experiências Práticas  
-Data: 31/10/2025
+Data: 01/11/2025
 
 ## ESTRUTURA
 
 sementes-do-amanha  
 ├── index.html  
-├── projetos.html  
-├── cadastro.html  
 ├── styles.css  
+├── js  
+│   └── spa-router.js  
+│   └── verificacao-formularios.js  
+│   └── sistema-templates.js  
 ├── fonts    
-├── /img     
+├── img     
 │    └── background  
 └── README.md
 
@@ -53,7 +54,12 @@ sementes-do-amanha
 - Animações e transições avançadas;
 - Variáveis CSS organizadas por categorias.
 
+(EXPERIÊNCIA PRÁTICA III)
+- Sistema de Single Page Application (SPA) básico;
+- Sistema de templates JavaScript;
+- Sistema de verificação de consistência de dados em formulários.
+
+
 ## ENTREGAS PENDENTES
 
-- EXPERIÊNCIA PRÁTICA III: Programação de Interfaces Web (JavaScript);
 - EXPERIÊNCIA PRÁTICA IV: Versionamento, Deploy e Infraestrutura.

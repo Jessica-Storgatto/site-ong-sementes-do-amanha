@@ -11,7 +11,7 @@
     <link rel="icon" type="img/png" sizes="16x16" href="img/favicon16x.png">
     <link rel="stylesheet" href="styles.css">
 </head>
-
+<body>
     <!-- Modal da Passeata Sustentável -->
     <div class="modal-wrapper">
         <input type="checkbox" id="modalToggle" class="modal-toggle" checked>
@@ -74,12 +74,11 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
-</body>
-</html>
     
-</body>
-</html>
+    <script src="js/spa-router.js"></script>
+    <script src="js/sistema-templates.js"></script>
+    <script src="js/form-validator.js"></script>
+
 
 <body>
     <!-- Cabeçalho -->
@@ -98,101 +97,69 @@
             
             <nav class="main-nav">
             <ul>
-                <li><a href="index.html">Início</a></li>
+                <li><a href="#/">Início</a></li>
                 <li class="dropdown">
-                    <a href="projetos.html" class="dropdown-toggle">Projetos</a>
+                    <a href="#/projetos" class="dropdown-toggle">Projetos</a>
                     <ul class="dropdown-menu">
-                        <li><a href="projetos.html#amazonia-verde">Amazônia Verde</a></li>
-                        <li><a href="projetos.html#educacao-ambiental">Educação Ambiental</a></li>
-                        <li><a href="projetos.html#economia-sustentavel">Economia Sustentável</a></li>
+                        <li><a href="#/projetos#amazonia-verde">Amazônia Verde</a></li>
+                        <li><a href="#/projetos#educacao-ambiental">Educação Ambiental</a></li>
+                        <li><a href="#/projetos#economia-sustentavel">Economia Sustentável</a></li>
                     </ul>
                 </li>
-                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="#/cadastro">Cadastro</a></li>
             </ul>
         </nav>
         </div>
     </header>
 
-    <!-- Conteúdo Principal -->
-    <main>
-        <!-- Página Inicial -->
-        <section id="home" class="hero">
-            <div class="container">
-                <h1>Sementes do Amanhã: O Guardião das Futuras Florestas</h1>
-                <p>Com o Curupira como nosso aliado, trabalhamos para reflorestar a Amazônia e garantir um futuro sustentável para as próximas gerações.</p>
-                <a href="cadastro.html" class="btn">Junte-se a Nós</a>
-            </div>
-        </section>
-
-        <!-- Sobre a Organização -->
-        <section id="sobre" class="about">
-            <div class="container">
-                <h2 class="section-title">Sobre a Sementes do Amanhã</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>A <strong>Sementes do Amanhã</strong> é uma organização não-governamental fundada em 2008 com a missão de proteger e recuperar a Floresta Amazônica. Inspirados pela lenda do Curupira, o guardião das florestas, atuamos com determinação e respeito aos saberes tradicionais.</p>
-                        <p>Nossa atuação se baseia em três pilares: <strong>reflorestamento</strong> de áreas degradadas, <strong>educação ambiental</strong> e <strong>empoderamento das comunidades locais</strong>. Acreditamos que a conservação da Amazônia é essencial para o equilíbrio climático global e para a sobrevivência de milhares de espécies.</p>
-                        <p>Com uma equipe multidisciplinar e o apoio de voluntários e parceiros, já recuperamos mais de 8.000 hectares de floresta e plantamos mais de 3 milhões de árvores nativas.</p>
-                    <div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Missão, Visão e Valores -->
-        <section id="missao" class="mission">
-            <div class="container">
-                <h2 class="section-title">Nossa Missão, Visão e Valores</h2>
-                <div class="mv-grid">
-                    <article class="mv-card">
-                        <h3>Missão</h3>
-                        <p>Promover a recuperação e conservação da Floresta Amazônica através do reflorestamento, educação ambiental e desenvolvimento sustentável, garantindo a proteção da biodiversidade e o bem-estar das comunidades tradicionais.</p>
-                    </article>
-                    
-                    <article class="mv-card">
-                        <h3>Visão</h3>
-                        <p>Ser referência na Amazônia como organização transformadora, onde o desenvolvimento econômico convive em harmonia com a preservação ambiental, inspirando uma nova geração de guardiões das florestas.</p>
-                    </article>
-                    
-                    <article class="mv-card">
-                        <h3>Valores</h3>
-                        <ul>
-                            <li>Respeito à biodiversidade e aos saberes tradicionais</li>
-                            <li>Compromisso com a transparência e ética</li>
-                            <li>Trabalho em parceria com comunidades locais</li>
-                            <li>Inovação em soluções sustentáveis</li>
-                            <li>Perseverança frente aos desafios</li>
-                        </ul>
-                    </article>
-                </div>
-            </div>
-        </section>
+    <main id="app">
+ 
     </main>
+</div>
 
     <!-- Rodapé -->
-    <footer class="footer-index">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Links Rápidos</h3>
-                    <ul>
-                        <li><a href="index.html">Início</a></li>
-                        <li><a href="projetos.html">Projetos</a></li>
-                        <li><a href="cadastro.html">Cadastre-se</a></li>                        
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Contato</h3>
-                    <ul>
-                        <li>📧 contato@sementesdoamanha.org.br</li>
-                        <li>📞 (11) 3456-7890</li>
-                        <li>📍 Av. Paulista, 1000 - São Paulo, SP</li>
-                    </ul>
-                </div>
+    <footer class="footer-projetos-cadastro">
+    <div class="container">
+        <div class="footer-content">
+            <!-- PRIMEIRA SEÇÃO -->
+            <div class="footer-section">
+                <h1>Sementes do Amanhã</h1>
+                <img src="img/iconpreservsince2010.png" alt="Icone Preservação desde 2010" width="180" height="180">
+                <p>Dedicados à preservação Amazônica desde 2010.</p>
             </div>
-            <div class="copyright">
-                <p>&copy; 2023 Sementes do Amanhã. Todos os direitos reservados.</p>
+            
+            <!-- SEGUNDA SEÇÃO -->
+            <div class="footer-section">
+                <h2>Contato</h2>
+                <ul>
+                    <li>📧 contato@sementesdoamanha.org.br</li>
+                    <li>📞 (11) 3456-7890</li>
+                    <li>📍 Av. Paulista, 1000 - São Paulo, SP</li>
+                </ul>
+            </div>
+            
+            <!-- TERCEIRA SEÇÃO -->
+            <div class="footer-section">
+                <p class="siga-texto">Siga-nos nas redes sociais</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">
+                        <img src="img/logofacebook.png" alt="Facebook" width="50" height="50">
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <img src="img/logoinstagram.png" alt="Instagram" width="50" height="50">
+                    </a>
+                    <a href="#" aria-label="X">
+                        <img src="img/logoX.png" alt="X" width="45" height="45">
+                    </a>
+                </div>
             </div>
         </div>
-    </footer>
+        
+        <div class="copyright">
+            <p>&copy; 2023 Sementes do Amanhã. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</footer>
+
 </body>
 </html>
