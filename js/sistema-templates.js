@@ -1,4 +1,4 @@
-//    PLATAFORMA WEB – ONG
+//    PLATAFORMA WEB – ONG Sementes do Amanhã
 //    DESENVOLVIDO POR: Jéssica de Albuquerque Storgatto
 //    INSTITUIÇÃO: Universidade Cruzeiro do Sul
 //    DISCIPLINA: Desenvolvimento FRONT—END para Web
