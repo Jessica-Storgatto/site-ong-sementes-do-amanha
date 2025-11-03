@@ -6,17 +6,20 @@ Autor(a): Jéssica de Albuquerque Storgatto
 Instituição: Universidade Cruzeiro do Sul  
 Disciplina: Desenvolvimento Front-End para Web  
 Atividade: Experiências Práticas  
-Data: 01/11/2025
+Data: 03/11/2025
 
 ## ESTRUTURA
 
 sementes-do-amanha  
-├── index.html  
-├── styles.css  
+├── index.min.html  
+├── styles.min.css  
 ├── js  
-│   └── spa-router.js  
-│   └── verificacao-formularios.js  
-│   └── sistema-templates.js  
+│   └── spa-router.min.js  
+│   └── verificacao-formularios.min.js  
+│   └── sistema-templates.min.js  
+│   └── keyboard-navigation.min.js  
+│   └── leitura-tela.min.js  
+│   └── modo-escuro-contraste.min.js  
 ├── fonts    
 ├── img     
 │    └── background  
@@ -59,7 +62,11 @@ sementes-do-amanha
 - Sistema de templates JavaScript;
 - Sistema de verificação de consistência de dados em formulários.
 
-
-## ENTREGAS PENDENTES
-
-- EXPERIÊNCIA PRÁTICA IV: Versionamento, Deploy e Infraestrutura.
+(EXPERIÊNCIA PRÁTICA IV)
+- Navegação por teclado em todos os componentes;
+- Estrutura semântica adequada;
+- Contraste mínimo de 4.5:1 para texto normal;
+- Suporte completo para leitores de tela;
+- Versão de alto contraste e modo escuro acessível;
+- Minificação de CSS, JavaScript e HTML;
+- Compressão de imagens.
