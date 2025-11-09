@@ -11,76 +11,8 @@
     <link rel="icon" type="img/png" sizes="16x16" href="img/favicon16x.png">
     <link rel="stylesheet" href="styles.css">
 </head>
-
-    <!-- Modal da Passeata Sustentável -->
-    <div class="modal-wrapper">
-        <input type="checkbox" id="modalToggle" class="modal-toggle" checked>
-        
-        <label for="modalToggle" class="modal-overlay"></label>
-        
-        <div class="modal-content">
-            <label for="modalToggle" class="modal-close" aria-label="Fechar modal">×</label>
-            
-            <div class="modal-header">
-                <div class="icon-emoji">🌍</div>
-                <h2>Participe da Grande Passeata pela Sustentabilidade!</h2>
-            </div>
-            
-            <div class="modal-body">
-                <div class="event-info">
-                    <div class="info-item">
-                        <span class="icon">📅</span>
-                        <div>
-                            <strong>Data:</strong>
-                            <p>Próximo Sábado</p>
-                        </div>
-                    </div>
-                    
-                    <div class="info-item">
-                        <span class="icon">⏰</span>
-                        <div>
-                            <strong>Horário:</strong>
-                            <p>9:00 às 12:00</p>
-                        </div>
-                    </div>
-                    
-                    <div class="info-item">
-                        <span class="icon">📍</span>
-                        <div>
-                            <strong>Local:</strong>
-                            <p>Avenida Paulista, em frente ao MASP</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="event-description">
-                    <p>Junte-se a nós nesse movimento importante pela preservação do meio ambiente! Vamos mostrar que juntos podemos fazer a diferença.</p>
-                    
-                    <ul>
-                        <li>✅ Camiseta verde (opcional)</li>
-                        <li>✅ Cartazes e faixas sustentáveis</li>
-                        <li>✅ Energia positiva e vontade de mudar</li>
-                        <li>✅ Amigos e familiares são bem-vindos!</li>
-                    </ul>
-                    
-                    <p class="highlight">Traga sua garrafa de água reutilizável! 💚</p>
-                </div>
-            </div>
-            
-            <div class="modal-footer">
-                <a href="#confirmar" class="btn btn-confirm">Eu vou participar!</a>
-                <label for="modalToggle" class="btn btn-secondary">Talvez depois</label>
-            </div>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
-</body>
-</html>
-
 <body>
+
     <header>
         <div class="container header-container">
             <div class="logo-container">
@@ -211,8 +143,8 @@
                             </div>
                         </fieldset>
 
-                        <fieldset>
-                            <legend>Como você quer ajudar?</legend>
+                        <fieldset required>
+                            <legend>Como você quer ajudar? <span style="color: var(--color-accent)">*</span></legend>
                             
                             <div class="form-group">
                                 <label>Tipo de Participação</label>
@@ -317,8 +249,7 @@
             <p>&copy; 2023 Sementes do Amanhã. Todos os direitos reservados.</p>
         </div>
     </div>
-</footer>
+    </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
