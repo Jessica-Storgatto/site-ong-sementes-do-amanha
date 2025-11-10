@@ -12,6 +12,33 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+<!-- Checkbox invisível para controlar o toast -->
+<input type="checkbox" id="toast-toggle" class="toast-toggle" checked>
+
+<!-- Toast Notification -->
+<label for="toast-toggle" class="toast toast-success show">
+    <div class="toast-icon">🌱</div>
+    <div class="toast-content">
+        <strong>Multirão de Plantio!</strong>
+        <p>Participe do nosso plantio de árvores no próximo final de semana!</p>
+    </div>
+</label>
+
+<!-- Overlay para fechar o toast -->
+<label for="toast-toggle" class="toast-overlay"></label>
+
+    <!-- Alert de Confirmação -->
+    <div class="alert-confirmacao" id="participar">
+        <div class="alert-content">
+            <div class="alert-icon">🎉</div>
+            <h3 class="alert-title">Inscrição Confirmada!</h3>
+            <p class="alert-message">Obrigado por se juntar à nossa passeata! Enviamos os detalhes para seu e-mail.</p>
+            <a href="#" class="btn btn-alert">Ótimo!</a>
+        </div>
+        <a href="#" class="alert-overlay"></a>
+    </div>
+
     <!-- Modal da Passeata Sustentável -->
     <div class="modal-wrapper">
         <input type="checkbox" id="modalToggle" class="modal-toggle" checked>
@@ -68,17 +95,15 @@
             </div>
             
             <div class="modal-footer">
-                <a href="#confirmar" class="btn btn-confirm">Eu vou participar!</a>
+                <a href="#participar" class="btn btn-confirm" onclick="document.getElementById('modalToggle').checked = false;">Eu vou participar!</a>
                 <label for="modalToggle" class="btn btn-secondary">Talvez depois</label>
             </div>
         </div>
     </div>
-
     
     <script src="js/spa-router.js"></script>
     <script src="js/sistema-templates.js"></script>
     <script src="js/form-validator.js"></script>
-
 
 <body>
     <!-- Cabeçalho -->

@@ -450,6 +450,123 @@ nav a:hover::after {
   background: linear-gradient(135deg, var(--color-warning-light) 0%, var(--color-accent-light) 100%);
 }
 
+/* ===== ESTADOS COMPLETOS PARA TODOS OS BOTÕES ===== */
+
+/* BOTÕES PRINCIPAIS */
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(30, 107, 71, 0.8);
+  background: linear-gradient(135deg, var(--color-warning-light) 0%, var(--color-accent-light) 100%);
+}
+
+.btn:focus {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.3), 0 6px 20px rgba(30, 107, 71, 0.8);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(30, 107, 71, 0.6);
+}
+
+.btn:disabled {
+  background: linear-gradient(135deg, #95A5A6 0%, #7F8C8D 100%);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+  opacity: 0.7;
+}
+
+/* BOTÕES DO MODAL */
+.btn-confirm:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(46, 139, 87, 0.4);
+}
+
+.btn-confirm:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(46, 139, 87, 0.3);
+}
+
+.btn-confirm:focus {
+  outline: 3px solid var(--color-success);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 3px rgba(46, 139, 87, 0.3);
+}
+
+.btn-secondary:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+  transform: translateY(-2px);
+}
+
+.btn-secondary:active {
+  background: var(--color-primary-dark);
+  transform: translateY(0);
+}
+
+.btn-secondary:focus {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* NAVEGAÇÃO */
+nav a:focus {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+nav a:active {
+  transform: translateY(1px);
+}
+
+/* DROPDOWN */
+.dropdown-toggle:focus {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* BOTÕES SOCIAIS */
+.social-links a:focus {
+  outline: 3px solid var(--color-primary-light);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+.social-links a:active img {
+  transform: scale(0.95);
+}
+
+/* BOTÕES DE DOAÇÃO */
+.donation-option:focus {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.donation-option:active {
+  transform: translateY(-2px);
+}
+
+/* BOTÃO SUBMIT DO FORMULÁRIO */
+.btn-submit:invalid {
+  background: #95a5a6;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.btn-submit:invalid:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.btn-submit:focus:valid {
+  outline: 3px solid var(--color-success);
+  outline-offset: 3px;
+}
+
 /* ===== SEÇÕES ===== */
 .about, .mission {
   padding: var(--space-5) 0;
@@ -1161,6 +1278,122 @@ input:invalid:not(:focus):not(:placeholder-shown) {
 small {
     color: var(--color-text-light);
     font-size: var(--font-size-sm);
+}
+
+/* ===== BOTÃO DISABLED COM MENSAGEM ===== */
+.btn-submit {
+  position: relative;
+  width: 100%;
+}
+
+/* Estilo do botão quando o formulário está inválido */
+#form-cadastro:invalid .btn-submit {
+  background: linear-gradient(135deg, #95A5A6 0%, #7F8C8D 100%) !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+  box-shadow: none !important;
+  opacity: 0.7 !important;
+  border-color: #7F8C8D !important;
+}
+
+#form-cadastro:invalid .btn-submit:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Mensagem de tooltip quando o formulário está inválido */
+#form-cadastro:invalid .btn-submit::after {
+  content: "Botão desabilitado - Complete os campos obrigatórios primeiro";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-neutral-dark);
+  color: var(--color-white);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-sm);
+  white-space: nowrap;
+  margin-bottom: var(--space-2);
+  box-shadow: var(--shadow);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+#form-cadastro:invalid .btn-submit:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Seta da tooltip */
+#form-cadastro:invalid .btn-submit::before {
+  content: "";
+  position: absolute;
+  bottom: calc(100% - 5px);
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: var(--color-neutral-dark);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+#form-cadastro:invalid .btn-submit:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== MELHORIAS NA VALIDAÇÃO VISUAL ===== */
+/* Campos obrigatórios vazios */
+input:required:invalid:not(:focus):not(:placeholder-shown),
+select:required:invalid:not(:focus),
+textarea:required:invalid:not(:focus):not(:placeholder-shown) {
+  border-color: var(--color-error);
+  background-color: rgba(231, 76, 60, 0.05);
+  animation: shake 0.5s ease-in-out;
+}
+
+/* Campos válidos */
+input:valid, 
+select:valid, 
+textarea:valid {
+  border-color: var(--color-success);
+  background-color: rgba(46, 139, 87, 0.05);
+}
+
+/* Radio buttons e checkbox obrigatórios */
+input[type="radio"]:required:invalid ~ span::after,
+input[type="checkbox"]:required:invalid ~ span::after {
+  content: " *";
+  color: var(--color-error);
+  font-weight: bold;
+}
+
+/* Estilo especial para o campo de termos */
+input[name="termos"]:invalid ~ span {
+  color: var(--color-error);
+}
+
+input[name="termos"]:valid ~ span {
+  color: var(--color-success);
+}
+
+/* Grupo de radio buttons inválido */
+.radio-group:has(input[type="radio"]:required:invalid) {
+  border: 2px solid var(--color-error);
+  background-color: rgba(231, 76, 60, 0.05);
+}
+
+/* Grupo de radio buttons válido */
+.radio-group:has(input[type="radio"]:required:valid) {
+  border: 2px solid var(--color-success);
+  background-color: rgba(46, 139, 87, 0.05);
 }
 
 /* ===== CORREÇÃO DEFINITIVA DOS RADIO BUTTONS ===== */
@@ -2057,6 +2290,161 @@ body:has(.modal-toggle:checked) {
     overflow: hidden;
 }
 
+/* ===== ALERT DE CONFIRMAÇÃO COM CSS PURO ===== */
+.alert-confirmacao {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4000;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+}
+
+.alert-confirmacao:target {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+
+.alert-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    z-index: 3999;
+}
+
+.alert-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    /* 🌟 FUNDO VERDE IGUAL AO HEADER */
+    background: linear-gradient(135deg, rgba(46, 139, 87, 0.95) 0%, rgba(30, 107, 71, 0.95) 100%);
+    padding: var(--space-5);
+    border-radius: var(--border-radius-xl);
+    box-shadow: var(--shadow-lg);
+    border: 4px solid var(--color-white);
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    z-index: 4000;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.alert-confirmacao:target .alert-content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.alert-icon {
+    font-size: 4rem;
+    margin-bottom: var(--space-3);
+    display: block;
+    animation: bounce 0.6s ease;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.alert-title {
+    /* 🌟 FONTE GERALDINE EM BRANCO */
+    color: var(--color-white);
+    margin-bottom: var(--space-3);
+    font-size: var(--font-size-2xl);
+    font-family: 'geraldine', cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    line-height: 1.2;
+}
+
+.alert-message {
+    /* 🌟 FONTE CARRYYOU EM BRANCO - 2 TAMANHOS MAIOR */
+    color: var(--color-white);
+    margin-bottom: var(--space-4);
+    line-height: 1.6;
+    font-size: var(--font-size-2xl); /* 🔥 2 tamanhos maior */
+    font-family: 'carryyou', cursive;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.btn-alert {
+    background: linear-gradient(135deg, var(--color-white) 0%, #f8f8f8 100%);
+    color: var(--color-primary);
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--border-radius-lg);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    transition: var(--transition);
+    border: 2px solid var(--color-white);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-alert:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #f8f8f8 0%, var(--color-white) 100%);
+}
+
+/* Animação do ícone */
+@keyframes bounce {
+    0%, 20%, 60%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    80% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Responsividade do Alert */
+@media (max-width: 767px) {
+    .alert-content {
+        padding: var(--space-4);
+        max-width: 350px;
+    }
+    
+    .alert-icon {
+        font-size: 3rem;
+    }
+    
+    .alert-title {
+        font-size: var(--font-size-xl);
+    }
+    
+    .alert-message {
+        font-size: var(--font-size-lg); /* 🔥 Ajuste responsivo */
+    }
+}
+
+@media (max-width: 480px) {
+    .alert-content {
+        padding: var(--space-3);
+        max-width: 300px;
+    }
+    
+    .alert-icon {
+        font-size: 2.5rem;
+    }
+    
+    .alert-title {
+        font-size: var(--font-size-lg);
+    }
+    
+    .alert-message {
+        font-size: var(--font-size-base); /* 🔥 Ajuste responsivo */
+    }
+}
+
 /* ===== CORREÇÃO NUCLEAR - FORÇA O ALINHAMENTO ===== */
 .radio-group label {
     display: grid !important;
@@ -2224,4 +2612,139 @@ body:has(.modal-toggle:checked) {
   .about, .mission, .projects, .volunteer, .donation, .form-section {
     padding: var(--space-6) 0;
   }
+}
+
+/* ===== TOAST NOTIFICATION ===== */
+.toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--color-white);
+    border-radius: var(--border-radius-lg);
+    padding: var(--space-3);
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-2);
+    max-width: 400px;
+    z-index: 9999;
+    border-left: 4px solid var(--color-info);
+    transform: translateX(400px);
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.toast.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.toast-icon {
+    font-size: var(--font-size-xl);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.toast-content {
+    flex: 1;
+}
+
+.toast-content strong {
+    color: var(--color-info);
+    display: block;
+    margin-bottom: 4px;
+    font-size: var(--font-size-base);
+}
+
+.toast-content p {
+    color: var(--color-text);
+    margin: 0;
+    font-size: var(--font-size-sm);
+    line-height: 1.4;
+}
+
+/* Variantes de toast */
+.toast-success {
+    border-left-color: var(--color-success);
+}
+
+.toast-success .toast-content strong {
+    color: var(--color-success);
+}
+
+.toast-warning {
+    border-left-color: var(--color-warning);
+}
+
+.toast-warning .toast-content strong {
+    color: var(--color-warning);
+}
+
+.toast-error {
+    border-left-color: var(--color-error);
+}
+
+.toast-error .toast-content strong {
+    color: var(--color-error);
+}
+
+/* Animação de entrada */
+@keyframes slideInToast {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Animação de saída */
+@keyframes slideOutToast {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .toast {
+        top: 10px;
+        right: 10px;
+        left: 10px;
+        max-width: none;
+        transform: translateY(-100px);
+    }
+    
+    .toast.show {
+        transform: translateY(0);
+    }
+}
+
+/* Auto-hide para toast com classe 'show' */
+.toast.show {
+    animation: slideInToast 0.5s ease-out forwards,
+               slideOutToast 0.5s ease-in 5s forwards;
+}
+
+/* ===== CORREÇÃO ESCONDER ELEMENTOS DO TOAST ===== */
+.toast-toggle {
+    display: none !important;
+    position: absolute !important;
+    left: -9999px !important;
+}
+
+.toast-overlay {
+    display: none !important;
+}
+
+/* Quando o toast não está visível, esconder completamente */
+.toast:not(.show) {
+    display: none !important;
 }

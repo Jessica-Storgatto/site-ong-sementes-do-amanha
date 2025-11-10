@@ -314,8 +314,8 @@ const templates = {
                             </div>
                         </fieldset>
 
-                        <fieldset>
-                            <legend>Como você quer ajudar?</legend>
+                        <fieldset required>
+                            <legend>Como você quer ajudar? <span style="color: var(--color-accent)">*</span></legend>
                             
                             <div class="form-group">
                                 <label>Tipo de Participação</label>
