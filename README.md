@@ -10,7 +10,7 @@ Atividade: Experiências Práticas
 Data: 31/10/2025
 
 ## ESTRUTURA
-
+```
 sementes-do-amanha  
 ├── index.html  
 ├── projetos.html  
@@ -20,7 +20,7 @@ sementes-do-amanha
 ├── /img     
 │    └── background  
 └── README.md
-
+```
 ## ENTREGAS REALIZADAS
 
 (EXPERIÊNCIA PRÁTICA I)
